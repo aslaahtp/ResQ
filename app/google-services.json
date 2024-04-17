@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "537797119523",
+    "firebase_url": "https://final-project-a7402-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "final-project-a7402",
+    "storage_bucket": "final-project-a7402.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537797119523:android:623c2a0142e0065d41eb96",
+        "android_client_info": {
+          "package_name": "com.enetapplications.empty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "537797119523-ts7o3t6311gsspjnrj4hijr6i6bcgdvo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.enetapplications.empty",
+            "certificate_hash": "14a0f67ecad964aff89d60b1481cac0f87afbceb"
+          }
+        },
+        {
+          "client_id": "537797119523-922148a4g1hs8jj8sd7pep3tajonb053.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqo2yBo8XVgGWOirT-1C5J3EwZXWCGMn0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "537797119523-922148a4g1hs8jj8sd7pep3tajonb053.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537797119523:android:2777dda258cf0ed941eb96",
+        "android_client_info": {
+          "package_name": "com.rexa.finalproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "537797119523-922148a4g1hs8jj8sd7pep3tajonb053.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqo2yBo8XVgGWOirT-1C5J3EwZXWCGMn0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "537797119523-922148a4g1hs8jj8sd7pep3tajonb053.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537797119523:android:4d89405fec5ab0de41eb96",
+        "android_client_info": {
+          "package_name": "com.rexa.magnathon_rexa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "537797119523-922148a4g1hs8jj8sd7pep3tajonb053.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqo2yBo8XVgGWOirT-1C5J3EwZXWCGMn0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "537797119523-922148a4g1hs8jj8sd7pep3tajonb053.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

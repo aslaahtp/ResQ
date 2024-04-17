@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cnt_layout"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_margin="5dp"
+    android:background="@drawable/bg_edittext">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageViewHorizontal"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/add_music_collection_svgrepo_com"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:riv_corner_radius="15dp" />
+
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/white"
+        android:drawableTint="@color/white"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="200"
+        android:textAlignment="center"
+        android:textColor="@color/text_color_black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ln_order"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/imageViewHorizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"></TextView>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/white"
+        android:drawableTint="@color/white"
+        android:gravity="center"
+        android:padding="7dp"
+        android:text="199"
+        android:textAlignment="center"
+        android:textColor="@color/text_color_black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_title"
+        app:layout_constraintStart_toEndOf="@+id/imageViewHorizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"></TextView>
+
+    <LinearLayout
+        android:id="@+id/ln_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/bg_edittext"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewHorizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+        <TextView
+            android:id="@+id/tv_t2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:text="Check"
+            android:visibility="gone"
+            android:textAlignment="center"
+            android:textColor="@color/text_color_black"
+            android:textSize="13sp"
+            android:textStyle="bold"></TextView>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
