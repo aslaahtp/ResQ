@@ -42,7 +42,7 @@ public class AdsSosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_sos);
+        setContentView(R.layout.activity_add_sos);
 
         ed_name=findViewById(R.id.ed_name);
         ed_location=findViewById(R.id.ed_name);
@@ -62,7 +62,8 @@ public class AdsSosActivity extends AppCompatActivity {
 
                 hashMap.put("name", ed_name.getText().toString());
                 hashMap.put("location", ed_location.getText().toString());
-                hashMap.put("type", ed_type.getText().toString());
+                hashMap.put("time", ed_type.getText().toString());
+                hashMap.put("e_id", e_id);
 
                 Map<String, Object> updateData = new HashMap<>();
                 updateData.put(uniqueId, hashMap);
@@ -70,7 +71,7 @@ public class AdsSosActivity extends AppCompatActivity {
 
                 new AestheticDialog.Builder(AdsSosActivity.this, DialogStyle.FLAT, DialogType.SUCCESS)
                         .setTitle("Added")
-                        .setMessage("Event Added Successfully")
+                        .setMessage("Sos Message Added Successfully")
                         .setCancelable(false)
                         .setDarkMode(true)
                         .setGravity(Gravity.CENTER)

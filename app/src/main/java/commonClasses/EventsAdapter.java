@@ -114,6 +114,22 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
                 context.startActivity(new Intent(context,SosActivity.class));
             }
         });
+
+        holder.bt_resources.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences sharedPreferences = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("event_id",item.getE_id());
+
+
+
+
+
+                // editor.apply();
+                context.startActivity(new Intent(context,ResActivity.class));
+            }
+        });
         // Other methods remain unchanged
     }
 
@@ -125,7 +141,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder {
         RoundedImageView imageView;
         TextView tv_title, tv_price;
-        LinearLayout bt_order;
+        LinearLayout bt_order,bt_resources;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -133,6 +149,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
             imageView = itemView.findViewById(R.id.imageViewHorizontal);
             tv_title = itemView.findViewById(R.id.tv_title);
             bt_order= itemView.findViewById(R.id.ln_order);
+            bt_resources= itemView.findViewById(R.id.ln_resources);
 
             tv_price = itemView.findViewById(R.id.tv_price);
 

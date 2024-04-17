@@ -93,6 +93,36 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/ln_resources"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_settings"
+        android:backgroundTint="#00C649"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewHorizontal">
+
+        <TextView
+            android:id="@+id/tv_t3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="16dp"
+            android:text="Resources"
+
+            android:textAlignment="center"
+            android:textColor="@color/text_color_white"
+            android:textSize="13sp"
+            android:textStyle="bold"></TextView>
+
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
