@@ -5,6 +5,7 @@ import java.io.Serializable;
 public class EventsModel implements Serializable {
 
     private String name;
+    private String e_id;
     private String location;
     private String type;
 
@@ -34,6 +35,14 @@ public class EventsModel implements Serializable {
         this.type =type;
     }
 
+
+    public String getE_id() {
+        return e_id;
+    }
+
+    public void setE_id(String e_id) {
+        this.e_id =e_id;
+    }
 
 
 

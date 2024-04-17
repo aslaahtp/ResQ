@@ -67,23 +67,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:background="@drawable/bg_edittext"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_settings"
+        android:backgroundTint="#CA002F"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageViewHorizontal"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewHorizontal">
 
         <TextView
             android:id="@+id/tv_t2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:padding="8dp"
-            android:text="Check"
-            android:visibility="gone"
+            android:padding="16dp"
+            android:text="SOS"
+
             android:textAlignment="center"
-            android:textColor="@color/text_color_black"
+            android:textColor="@color/text_color_white"
             android:textSize="13sp"
             android:textStyle="bold"></TextView>
 

@@ -102,17 +102,16 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
         holder.bt_order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // SharedPreferences sharedPreferences = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-               // SharedPreferences.Editor editor = sharedPreferences.edit();
-               // editor.putString("frameurl",item.getUrl());
+               SharedPreferences sharedPreferences = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("event_id",item.getE_id());
 
-               // editor.putString("frametitle", item.getTitle());
-               // editor.putString("frameprice", String.valueOf(item.getPrice()));
+
 
 
 
                // editor.apply();
-               // context.startActivity(new Intent(context, PrintActivity.class));
+                context.startActivity(new Intent(context,SosActivity.class));
             }
         });
         // Other methods remain unchanged

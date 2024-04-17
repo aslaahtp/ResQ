@@ -20,6 +20,13 @@
         tools:ignore="ExtraText"
         tools:targetApi="31">
         <activity
+            android:name="commonClasses.AddSosActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Android" />
+        <activity
+            android:name="commonClasses.SosActivity"
+            android:exported="false" />
+        <activity
             android:name="commonClasses.EventsActivity"
             android:exported="false" />
         <activity
