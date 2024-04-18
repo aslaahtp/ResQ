@@ -52,6 +52,7 @@ import commonClasses.EventsActivity;
 import commonClasses.EventsAdapter;
 import commonClasses.EventsModel;
 import commonClasses.LiveChat;
+import commonClasses.MainActivity;
 import navigationBars.DrawerBaseActivity;
 import volunteer.HomeScreenVolunteer;
 
@@ -64,7 +65,7 @@ public class HomeScreenUser extends DrawerBaseActivity implements View.OnClickLi
     CardView emergencyContactsCardView;
     CardView yourAreaCArdView;
     CardView requestHelpCardView;
-    CardView emergencyRescueSOSCardView;
+    CardView cv_tutorials;
     CardView cv_add;
     BottomNavigationItemView home;
     BottomNavigationItemView helpline;
@@ -113,6 +114,13 @@ public class HomeScreenUser extends DrawerBaseActivity implements View.OnClickLi
             }
         });
 
+        cv_tutorials.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeScreenUser.this,MainActivity.class));
+            }
+        });
+
 
         //button click
         forecastCardView.setOnClickListener(this);
@@ -127,6 +135,7 @@ public class HomeScreenUser extends DrawerBaseActivity implements View.OnClickLi
     private void initializeViewIDs() {
        cv_add= findViewById(R.id.cv_add);
         forecastCardView = findViewById(R.id.forecastCardViewID);
+        cv_tutorials= findViewById(R.id.cv_tutorials);
 
 
 
@@ -143,7 +152,7 @@ public class HomeScreenUser extends DrawerBaseActivity implements View.OnClickLi
            start_addactivity();
         }  else if (v.getId() == R.id.liveChatMenuID) {
             start_LiveChat_activity();
-        } else if (v.getId() == R.id.aboutUsMenuID) {
+        } else if (v.getId() == R.id.cv_tutorials) {
             start_AboutUs_activity();
         }
 
@@ -314,7 +323,7 @@ public class HomeScreenUser extends DrawerBaseActivity implements View.OnClickLi
     }
 
     private void start_AboutUs_activity() {
-        Intent intent = new Intent(this, AboutUs.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
 
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
