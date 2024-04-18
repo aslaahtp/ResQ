@@ -6,15 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="150dp"
     android:layout_margin="5dp"
-    android:background="@drawable/bg_edittext">
+    android:background="@drawable/bg_grad1">
 
 
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/imageViewHorizontal"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_marginStart="8dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/add_music_collection_svgrepo_com"
+        android:src="@drawable/hazard"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -28,7 +29,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="4dp"
-        android:layout_marginBottom="8dp"
         android:backgroundTint="@color/white"
         android:drawableTint="@color/white"
         android:gravity="center"
@@ -38,10 +38,11 @@
         android:textColor="@color/text_color_black"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/ln_order"
+        app:layout_constraintBottom_toTopOf="@+id/tv_title"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@+id/imageViewHorizontal"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title"></TextView>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"></TextView>
 
     <TextView
         android:id="@+id/tv_title"
@@ -57,24 +58,23 @@
         android:textColor="@color/text_color_black"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tv_title"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageViewHorizontal"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/tv_price"></TextView>
 
     <LinearLayout
         android:id="@+id/ln_order"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/bg_settings"
         android:backgroundTint="#CA002F"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ln_resources"
         app:layout_constraintTop_toBottomOf="@+id/imageViewHorizontal">
 
         <TextView
@@ -82,8 +82,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:padding="16dp"
-            android:text="SOS"
+            android:padding="10dp"
+            android:text="Rescue"
 
             android:textAlignment="center"
             android:textColor="@color/text_color_white"
@@ -98,7 +98,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/bg_settings"
         android:backgroundTint="#00C649"
         android:gravity="center"
@@ -112,9 +113,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:padding="16dp"
-            android:text="Resources"
 
+            android:padding="10dp"
+            android:text="Resources"
             android:textAlignment="center"
             android:textColor="@color/text_color_white"
             android:textSize="13sp"

@@ -63,7 +63,7 @@ public class AdsSosActivity extends AppCompatActivity {
                 hashMap.put("name", ed_name.getText().toString());
                 hashMap.put("location", ed_location.getText().toString());
                 hashMap.put("time", ed_type.getText().toString());
-                hashMap.put("e_id", e_id);
+                hashMap.put("event_id", e_id);
 
                 Map<String, Object> updateData = new HashMap<>();
                 updateData.put(uniqueId, hashMap);

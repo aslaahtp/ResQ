@@ -28,8 +28,8 @@ import java.util.List;
 import user.HomeScreenUser;
 
 public class SosActivity extends AppCompatActivity {
-    List<EventsModel> packlist;
-    EventsAdapter framesAdapter;
+    List<SosModel> packlist;
+    SosAdapter framesAdapter;
     RecyclerView recyclerView;
     AppCompatButton bt_req;
     String e_id;
@@ -39,7 +39,7 @@ public class SosActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_sos);
 
-        packlist = new ArrayList<EventsModel>();
+        packlist = new ArrayList<SosModel>();
         recyclerView = findViewById(R.id.recyclerView);
      bt_req = findViewById(R.id.bt_submit);
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
@@ -63,8 +63,8 @@ public class SosActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 packlist.clear();
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                    EventsModel posts = postSnapshot.getValue( EventsModel.class);
-                    if (posts.getE_id().equals(e_id)){
+                    SosModel posts = postSnapshot.getValue( SosModel.class);
+                    if (posts.getEvent_id().equals(e_id)){
                         packlist.add(posts);
                     }
 
@@ -72,7 +72,7 @@ public class SosActivity extends AppCompatActivity {
                 }
 
 
-                EventsAdapter eventsAdapter = new EventsAdapter(packlist, SosActivity.this);
+                SosAdapter eventsAdapter = new SosAdapter(packlist, SosActivity.this);
                 eventsAdapter.setSelectedItemPosition(1);
 
                 recyclerView.setAdapter(eventsAdapter); // Set the adapter here

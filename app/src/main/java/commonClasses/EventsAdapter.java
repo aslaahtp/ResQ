@@ -68,7 +68,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
              //   .into(holder.imageView);
 
         holder.tv_price.setText(price);
-        holder.tv_title.setText(item.getType());
+        holder.tv_title.setText("Category:"+item.getType());
 
 
         // Set background color based on selection state
@@ -104,7 +104,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
             public void onClick(View v) {
                SharedPreferences sharedPreferences = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("event_id",item.getE_id());
+                editor.putString("event_id",item.getEvent_id());
 
 
 
@@ -120,7 +120,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
             public void onClick(View v) {
                 SharedPreferences sharedPreferences = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("event_id",item.getE_id());
+                editor.putString("event_id",item.getEvent_id());
 
 
 

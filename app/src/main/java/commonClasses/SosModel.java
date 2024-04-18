@@ -7,6 +7,8 @@ public class SosModel implements Serializable {
     private String name;
     private String location;
     private String time;
+    private String event_id;
+
 
 
     private boolean isSelected = false;
@@ -33,6 +35,15 @@ public class SosModel implements Serializable {
     public void setTime(String time) {
         this.time =time;
     }
+
+    public String getEvent_id() {
+        return event_id;
+    }
+
+    public void setEvent_id(String eventId) {
+        this.event_id =eventId;
+    }
+
 
 
 

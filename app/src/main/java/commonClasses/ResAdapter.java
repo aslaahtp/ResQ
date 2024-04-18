@@ -47,7 +47,7 @@ public class ResAdapter extends RecyclerView.Adapter<ResAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_events, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_sos, parent, false);
         return new ViewHolder(view);
 
     }
@@ -66,7 +66,7 @@ public class ResAdapter extends RecyclerView.Adapter<ResAdapter.ViewHolder> {
              //   .into(holder.imageView);
 
         holder.tv_price.setText(price);
-        holder.tv_title.setText(item.getcontact());
+        holder.tv_title.setText(dollar );
 
 
         // Set background color based on selection state

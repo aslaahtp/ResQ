@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -39,19 +40,20 @@ public class AddResActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_add_sos);
+        setContentView(R.layout.activity_add_res);
 
         ed_name=findViewById(R.id.ed_name);
         ed_location=findViewById(R.id.ed_name);
         ed_type=findViewById(R.id.ed_name);
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         e_id= sharedPreferences.getString("event_id", "");
+        Toast.makeText(this, ""+e_id, Toast.LENGTH_SHORT).show();
         bt_submit=findViewById(R.id.bt_submit);
 
         bt_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DatabaseReference reference = FirebaseDatabase.getInstance().getReference("sos");
+                DatabaseReference reference = FirebaseDatabase.getInstance().getReference("res");
 
                 // Check if the user node already exists
                 HashMap<String, Object> hashMap = new HashMap<>();
@@ -60,7 +62,7 @@ public class AddResActivity extends AppCompatActivity {
                 hashMap.put("name", ed_name.getText().toString());
                 hashMap.put("qty", ed_location.getText().toString());
                 hashMap.put("contact", ed_type.getText().toString());
-                hashMap.put("e_id", e_id);
+                hashMap.put("event_id", e_id);
 
                 Map<String, Object> updateData = new HashMap<>();
                 updateData.put(uniqueId, hashMap);

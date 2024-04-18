@@ -35,7 +35,7 @@ public class ResActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_sos);
+        setContentView(R.layout.activity_res);
 
         packlist = new ArrayList<ResModel>();
         recyclerView = findViewById(R.id.recyclerView);
@@ -47,7 +47,7 @@ public class ResActivity extends AppCompatActivity {
         bt_req.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ResActivity.this,AdsSosActivity.class));
+                startActivity(new Intent(ResActivity.this,AddResActivity.class));
             }
         });
 

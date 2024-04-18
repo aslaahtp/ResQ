@@ -26,7 +26,7 @@ import java.util.List;
 
 // Your updated RecyclerView Adapter
 public class SosAdapter extends RecyclerView.Adapter<SosAdapter.ViewHolder> {
-    private List<EventsModel> itemList;
+    private List<SosModel> itemList;
     private Context context;
     FirebaseAuth mAuth;
     private static final int PERMISSION_REQUEST_CODE = 123;
@@ -34,7 +34,7 @@ public class SosAdapter extends RecyclerView.Adapter<SosAdapter.ViewHolder> {
     int initialSelectedItemPosition = 2;
     private OnItemSelectedListener listener;
 
-    public SosAdapter(List<EventsModel> itemList, Context context) {
+    public SosAdapter(List<SosModel> itemList, Context context) {
         this.itemList = itemList;
         this.context = context;
     }
@@ -47,14 +47,14 @@ public class SosAdapter extends RecyclerView.Adapter<SosAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_events, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_sos, parent, false);
         return new ViewHolder(view);
 
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        EventsModel item = itemList.get(position);
+        SosModel item = itemList.get(position);
 
 
 
@@ -66,7 +66,7 @@ public class SosAdapter extends RecyclerView.Adapter<SosAdapter.ViewHolder> {
              //   .into(holder.imageView);
 
         holder.tv_price.setText(price);
-        holder.tv_title.setText(item.getType());
+        holder.tv_title.setText(item.getLocation());
 
 
         // Set background color based on selection state
