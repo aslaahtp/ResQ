@@ -13,6 +13,7 @@
         android:id="@+id/titleViewID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:text="Dashboard"
         android:textColor="#555252"
         android:textSize="20sp"
@@ -29,6 +30,7 @@
         android:checked="false"
         android:textOff="User"
         android:textOn="Volunteer"
+
         android:thumb="@drawable/thumb"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"

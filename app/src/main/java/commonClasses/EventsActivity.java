@@ -66,7 +66,7 @@ public class EventsActivity extends AppCompatActivity {
                 hashMap.put("name", ed_name.getText().toString());
                 hashMap.put("location", ed_location.getText().toString());
                 hashMap.put("type", ed_type.getText().toString());
-                hashMap.put("e_id", uniqueId);
+                hashMap.put("event_id", uniqueId);
 
                 Map<String, Object> updateData = new HashMap<>();
                 updateData.put(uniqueId, hashMap);

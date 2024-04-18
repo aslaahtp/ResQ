@@ -34,7 +34,7 @@ import user.HomeScreenUser;
 
 public class AdsSosActivity extends AppCompatActivity {
 
-    EditText ed_name,ed_location,ed_type;
+    EditText ed_name,ed_location,ed_type,ed_contact;
 
     AppCompatButton bt_submit;
     String e_id;
@@ -45,8 +45,9 @@ public class AdsSosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_sos);
 
         ed_name=findViewById(R.id.ed_name);
-        ed_location=findViewById(R.id.ed_name);
-        ed_type=findViewById(R.id.ed_name);
+        ed_location=findViewById(R.id.ed_location);
+        ed_type=findViewById(R.id.ed_type);
+        ed_contact=findViewById(R.id.ed_contact);
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         e_id= sharedPreferences.getString("event_id", "");
         bt_submit=findViewById(R.id.bt_submit);
@@ -63,6 +64,7 @@ public class AdsSosActivity extends AppCompatActivity {
                 hashMap.put("name", ed_name.getText().toString());
                 hashMap.put("location", ed_location.getText().toString());
                 hashMap.put("time", ed_type.getText().toString());
+                hashMap.put("contact", ed_contact.getText().toString());
                 hashMap.put("event_id", e_id);
 
                 Map<String, Object> updateData = new HashMap<>();

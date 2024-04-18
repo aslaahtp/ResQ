@@ -68,7 +68,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
              //   .into(holder.imageView);
 
         holder.tv_price.setText(price);
-        holder.tv_title.setText("Category:"+item.getType());
+        holder.tv_title.setText("Category: "+item.getType());
 
 
         // Set background color based on selection state
@@ -110,7 +110,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
 
 
 
-               // editor.apply();
+                editor.apply();
                 context.startActivity(new Intent(context,SosActivity.class));
             }
         });
@@ -126,7 +126,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
 
 
 
-                // editor.apply();
+                editor.apply();
                 context.startActivity(new Intent(context,ResActivity.class));
             }
         });

@@ -1,10 +1,14 @@
 package commonClasses;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -66,7 +70,7 @@ public class SosAdapter extends RecyclerView.Adapter<SosAdapter.ViewHolder> {
              //   .into(holder.imageView);
 
         holder.tv_price.setText(price);
-        holder.tv_title.setText(item.getLocation());
+        holder.tv_title.setText(dollar);
 
 
         // Set background color based on selection state
@@ -111,6 +115,11 @@ public class SosAdapter extends RecyclerView.Adapter<SosAdapter.ViewHolder> {
 
                // editor.apply();
                // context.startActivity(new Intent(context, PrintActivity.class));
+
+
+                String phone = item.getContact();
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
+               context. startActivity(intent);
             }
         });
         // Other methods remain unchanged
@@ -131,7 +140,7 @@ public class SosAdapter extends RecyclerView.Adapter<SosAdapter.ViewHolder> {
             super(itemView);
             imageView = itemView.findViewById(R.id.imageViewHorizontal);
             tv_title = itemView.findViewById(R.id.tv_title);
-            bt_order= itemView.findViewById(R.id.ln_order);
+            bt_order= itemView.findViewById(R.id.ln_resources);
 
             tv_price = itemView.findViewById(R.id.tv_price);
 

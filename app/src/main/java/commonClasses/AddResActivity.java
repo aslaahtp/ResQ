@@ -43,8 +43,8 @@ public class AddResActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_res);
 
         ed_name=findViewById(R.id.ed_name);
-        ed_location=findViewById(R.id.ed_name);
-        ed_type=findViewById(R.id.ed_name);
+        ed_location=findViewById(R.id.ed_location);
+        ed_type=findViewById(R.id.ed_type);
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         e_id= sharedPreferences.getString("event_id", "");
         Toast.makeText(this, ""+e_id, Toast.LENGTH_SHORT).show();

@@ -8,6 +8,7 @@ public class SosModel implements Serializable {
     private String location;
     private String time;
     private String event_id;
+    private String contact;
 
 
 
@@ -42,6 +43,14 @@ public class SosModel implements Serializable {
 
     public void setEvent_id(String eventId) {
         this.event_id =eventId;
+    }
+
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact =contact;
     }
 
 
